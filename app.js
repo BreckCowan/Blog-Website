@@ -8,6 +8,7 @@ const _ = require("lodash");
 const homeStartingContent = "Hello World!  Welcome to my dive into web developement.  ";
 const aboutContent = "This is going to be my content area(attach git hub once it is filled, put in projects)";
 const contactContent = "If you would like to contact me, please enter your informtion in the form below and I will return your message at the earliest opportunity.  Thank you!";
+const projectsContent = "Projects that you have worked on should be added here in different accessable fuctioning features to highlight your work"
 
 const app = express();
 
@@ -32,6 +33,10 @@ app.get("/about", function(req, res){
 
 app.get("/contact", function(req, res){
   res.render("contact", {contactContent: contactContent});
+});
+
+app.get("/projects", function(req, res){
+  res.render("projects", {projectsContent: projectsContent});
 });
 
 
